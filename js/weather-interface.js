@@ -4,12 +4,24 @@ function displayHumidity(city, humidityData) {
   $('.humidity').text('The humidity in ' + city + ' is ' + humidityData + '%');
 }
 
+function displayTemperature(city, tempData) {
+  $('.temperature').text('The temperature in ' + city + ' is ' + tempData);
+}
+
 $(document).ready(function(){
-  $('#weatherLocation').click(function(){
+  $('#getHumidity').click(function(){
 
     var city = $('#location').val();
     $('#location').val("");
 
     Weather.getHumidity(city, displayHumidity);
+  });
+
+  $('#getTemperature').click(function() {
+    var city = $('#location').val();
+    $('#location').val("");
+    var scale = $('#scale').val();
+
+    Weather.getTemperature(city, displayTemperature, scale);
   });
 });

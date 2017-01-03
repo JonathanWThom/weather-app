@@ -11,8 +11,16 @@
       <h1>Get Weather Conditions From Anywhere!</h1>
       <label for="location">Enter a location:</label>
       <input id="location" type="text">
-      <button class="btn-success" id="weatherLocation">Get Current Humidity!</button>
+      <button class="btn-success" id="getHumidity">Get Current Humidity!</button>
       <div class="humidity"></div>
+      <label for="scale">Select a Scale</label>
+      <select id="scale">
+        <option value="kelvin">Kelvin</option>
+        <option value="celcius">Celcius</option>
+        <option value="fahrenheit">Fahrenheit</option>
+      </select>
+      <button class="btn-success" id="getTemperature">Get Temperature</button>
+      <div class="temperature"></div>
     </div>
   </body>
 </html>
