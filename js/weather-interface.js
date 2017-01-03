@@ -4,8 +4,8 @@ function displayHumidity(city, humidityData) {
   $('.humidity').text('The humidity in ' + city + ' is ' + humidityData + '%');
 }
 
-function displayTemperature(city, tempData) {
-  $('.temperature').text('The temperature in ' + city + ' is ' + tempData);
+function displayTemperature(city, tempData, scale) {
+  $('.temperature').text('The temperature in ' + city + ' is ' + tempData + ' degrees ' + scale);
 }
 
 $(document).ready(function(){

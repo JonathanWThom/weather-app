@@ -24,10 +24,10 @@ Weather.getTemperature = function(city, displayFunction, scale) {
     } else {
       returnValue = returnValue;
     }
-    displayFunction(city, returnValue);
+    displayFunction(city, returnValue, scale);
   }).fail(function(error){
     returnValue = error.responseJSON.message;
-    displayFunction(city, returnValue);
+    displayFunction(city, returnValue, scale);
   });
 };
 
